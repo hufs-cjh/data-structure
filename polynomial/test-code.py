@@ -38,9 +38,11 @@ for i in range(100000):
     A.append(random.randint(-1000, 1000))
 
 results = []
-for i in range(1000, 100000, 1000):
-    n2 = round(calc_time(evaluate_n2, [A, x, i]), 3)
-    n1 = round(calc_time(evaluate_n, [A, x, i]), 3)
-    result_str = f"n = {i}\t\tO(n^2): {n2}\t\tO(n): {n1}"
-    results.append(result_str)
-    print(result_str)
+
+with open("./result.txt", "a") as f:
+    for i in range(1000, 100000, 1000):
+        n2 = round(calc_time(evaluate_n2, [A, x, i]), 3)
+        n1 = round(calc_time(evaluate_n, [A, x, i]), 3)
+        result_str = f"n = {i}\t\tO(n^2): {n2}\t\tO(n): {n1}"
+        f.write(result_str + "\n")
+        print(result_str)
