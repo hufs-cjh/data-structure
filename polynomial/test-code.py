@@ -34,7 +34,7 @@ x = random.randint(-1000, 1000)     # initialize x
 
 # initialize list A and fill with randint
 A = []
-for i in range(100000):
+for i in range(25000):
     A.append(random.randint(-1000, 1000))
 
 results = []
