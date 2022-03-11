@@ -40,7 +40,7 @@ for i in range(100000):
 results = []
 
 with open("./result.txt", "a") as f:
-    for i in range(1000, 100000, 1000):
+    for i in range(1000, 25000, 1000):
         n2 = round(calc_time(evaluate_n2, [A, x, i]), 3)
         n1 = round(calc_time(evaluate_n, [A, x, i]), 3)
         result_str = f"n = {i}\t\tO(n^2): {n2}\t\tO(n): {n1}"
